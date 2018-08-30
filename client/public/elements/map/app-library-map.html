@@ -1,0 +1,133 @@
+<style>
+  :host {
+    display: block;
+    margin: 20px;
+    padding: 20px;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 100;
+    }
+  }
+
+  .root {
+    position: relative;
+  }
+
+  #position {
+    position: absolute;
+    height: 10px;
+    width: 10px;
+  }
+
+  @keyframes grow {
+    from {
+      opacity: 1;
+      transform: scale(1);
+    }
+    to {
+      opacity: 0;
+      transform: scale(2);
+    }
+  }
+
+  .position .ring {
+    border-radius: 10px;
+    animation: grow 1500ms linear infinite;
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    border: 1px solid blue;
+    top: -1px;
+    left: -1px;
+  }
+
+  .position .marker {
+    border-radius: 10px;
+    height: 10px;
+    width: 10px;
+    background-color: blue;
+    top: 0;
+    left: 0;
+  }
+
+  .scene-pt {
+    cursor: pointer;
+    margin: 1px 0 0 1px;
+    /* position: absolute; */
+    border-radius: 8px;
+    height: 8px;
+    width: 8px;
+    background-color: orange;
+  }
+
+  .map-level {
+    animation : fadeIn 500ms linear;
+    /* position: absolute; */
+    /* display: none; */
+  }
+
+  .map-level[selected] {
+    display: block;
+  }
+
+  .floor-btn {
+    padding: 10px;
+    color: white;
+    background: #385dd2;
+    margin: 5px;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 4px;
+    border: 2px solid transparent;
+  }
+
+  .floor-btn[selected] {
+    border: 2px solid orange;
+  }
+
+  .floor-btn[current] {
+    color: orange;
+    font-weight: bold;
+    font-size: 16px;
+  }
+</style>
+
+<div style="display:flex">
+  <div class="root" style="flex:1">
+    <div id="viewer" style="height: 400px"></div>
+  </div>
+
+  <!-- <div class="root">
+    <dom-repeat items="[[floorScenes]]">
+      <template>
+        <div class="scene-pt" on-click="_onScenePtClicked" style$="top:[[item.y]]px; left:[[item.x]]px" index$="[[index]]">
+      </template>
+    </dom-repeat>
+
+    <div id="position" hidden$="[[!showCurrentPos]]" style$="top:[[positionY]]px; left:[[positionX]]px">
+      <div style="position: relative">
+        <div class="ring"></div>
+        <div class="marker"></div>
+      </div>
+    </div>
+    <img src$="[[floorPath]]" on-click="_showClickPt" />
+  </div> -->
+
+  <div>
+    <dom-repeat items="[[floors]]">
+      <template>
+        <div class="floor-btn" selected$="[[item.selected]]" current$="[[item.current]]" index$="[[index]]" on-click="_showFloor">
+          [[item.label]]
+        </div>
+      </template>
+    </dom-repeat>
+  </div>
+</div>
+
+
+

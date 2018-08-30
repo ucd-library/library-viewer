@@ -1,0 +1,190 @@
+{
+  "floors": {
+    "1": "map-shields-1.png",
+    "2": "map-shields-2.png",
+    "3": "map-shields-3.png",
+    "4": "map-shields-4.png",
+    "LL": "map-shields-LL.png"
+  },
+  "scenes": [
+    {
+      "id": "scene5",
+      "name": "Corridor",
+      "filename": "Library360-NelleBrPassthrough70qual.jpg",
+      "floor": "2",
+      "coordinate": [
+        85,
+        242
+      ],
+      "hotSpots": [
+        {
+          "yaw": -247.9344,
+          "pitch": 1.9988,
+          "sceneId": "scene6",
+          "popover": "Go to Nelle Branch Reading Room"
+        },
+        {
+          "yaw": -67.3962,
+          "pitch": -3.9394,
+          "sceneId": "scene4",
+          "popover": "Go to Main Reading Room"
+        }
+      ]
+    },
+    {
+      "id": "scene10",
+      "name": "Courtyard (East)",
+      "filename": "Library360-Courtyard3-48qual.jpg",
+      "floor": "1",
+      "coordinate": [
+        255,
+        347
+      ],
+      "hotSpots": [
+        {
+          "yaw": 318.9522,
+          "pitch": -2.071,
+          "sceneId": "scene8",
+          "popover": "Go to west side of courtyard"
+        }
+      ]
+    },
+    {
+      "id": "scene4",
+      "name": "Main Reading Room",
+      "filename": "Library360-MainReadingRoom-Middle.jpg",
+      "floor": "2",
+      "coordinate": [
+        69,
+        365
+      ],
+      "hotSpots": [
+        {
+          "yaw": 148.9346,
+          "pitch": 3.3014,
+          "sceneId": "scene5",
+          "popover": "Go to Corridor"
+        },
+        {
+          "yaw": 317.8342,
+          "pitch": -4.3014,
+          "sceneId": "scene2",
+          "popover": "Go to Sally Porter Reading Room"
+        }
+      ]
+    },
+    {
+      "id": "scene7",
+      "name": "Amerine Room",
+      "filename": "Library360-AmerineRoom.jpg",
+      "floor": "3",
+      "coordinate": [
+        111,
+        693
+      ],
+      "hotSpots": []
+    },
+    {
+      "id": "scene2",
+      "name": "Sally Porter Reading Room",
+      "filename": "Library360-SallyPorterRoom.jpg",
+      "floor": "2",
+      "coordinate": [
+        77,
+        532
+      ],
+      "hotSpots": [
+        {
+          "yaw": -95.3126,
+          "pitch": 1.3014,
+          "sceneId": "scene3",
+          "popover": "Go to Study Room"
+        },
+        {
+          "yaw": -141.6674,
+          "pitch": 1.3014,
+          "sceneId": "scene1",
+          "popover": "Go to Study Corridor"
+        },
+        {
+          "yaw": 37.878,
+          "pitch": 1.3014,
+          "sceneId": "scene4",
+          "popover": "Go to Main Reading Room"
+        }
+      ]
+    },
+    {
+      "id": "scene8",
+      "name": "Courtyard (West)",
+      "filename": "Library360-Courtyard1-50qual.jpg",
+      "floor": "1",
+      "coordinate": [
+        300,
+        470
+      ],
+      "hotSpots": [
+        {
+          "yaw": -46.7092,
+          "pitch": 1.1452,
+          "sceneId": "scene10",
+          "popover": "Go to the east side of courtyard"
+        }
+      ]
+    },
+    {
+      "id": "scene6",
+      "name": "Nelle Branch Room",
+      "filename": "Library360-NelleBranch.jpg",
+      "floor": "2",
+      "coordinate": [
+        84,
+        183
+      ],
+      "hotSpots": [
+        {
+          "yaw": 87.768,
+          "pitch": 2.4376,
+          "sceneId": "scene5",
+          "popover": "Go to Corridor"
+        }
+      ]
+    },
+    {
+      "id": "scene1",
+      "name": "Study Corridor",
+      "filename": "Library360-SallyPorterEntrance.jpg",
+      "floor": "2",
+      "coordinate": [
+        75,
+        577
+      ],
+      "hotSpots": [
+        {
+          "yaw": 15.0206,
+          "pitch": -2.9206,
+          "sceneId": "scene2",
+          "popover": "Go to Sally Porter Reading Room"
+        }
+      ]
+    },
+    {
+      "id": "scene3",
+      "name": "Study Room",
+      "filename": "Library360-SallyPorterStudyRm.jpg",
+      "floor": "2",
+      "coordinate": [
+        47,
+        554
+      ],
+      "hotSpots": [
+        {
+          "yaw": 161.3268,
+          "pitch": 1.3014,
+          "sceneId": "scene2",
+          "popover": "Go to Sally Porter Reading Room"
+        }
+      ]
+    }
+  ]
+}
