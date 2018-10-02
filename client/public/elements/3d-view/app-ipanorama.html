@@ -1,0 +1,34 @@
+<style>
+  app-ipanorama {
+    display: block;
+  }
+
+  app-ipanorama #ipanorama {
+    height: 400px;
+  }
+
+  app-ipanorama app-library-mini-map {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    cursor: pointer;
+  }
+
+  .ipnrm-title {
+    left: 125px !important;
+    bottom: 15px !important;
+  }
+</style>
+
+<script src="ipanorama/jquery.min.js"></script>
+<script src="ipanorama/three.min.js"></script>
+<script src="ipanorama/jquery.ipanorama.min.js"></script>
+
+<link rel="stylesheet" href="ipanorama/font-awesome.min.css" />
+<link rel="stylesheet" href="ipanorama/ipanorama.min.css" />
+<link rel="stylesheet" href="ipanorama/ipanorama.theme.default.min.css" />
+
+<div style="position: relative">
+  <div id="ipanorama"></div>
+  <app-library-mini-map on-click="_fireSwitch"></app-library-mini-map>
+</div>

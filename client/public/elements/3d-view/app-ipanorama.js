@@ -28,8 +28,18 @@ export default class AppIpanorama extends Mixin(PolymerElement)
     // document.querySelector('#ipanorama').appendChild(this.$.root);
 
     requestAnimationFrame(() => {
-      this.LocationModel.init(this, ipanoramaTransform(config.scenes.scenes));
+      this.LocationModel.init(this.$.ipanorama, ipanoramaTransform(config.scenes.scenes));
     });
+  }
+
+  onResize() {
+    setTimeout(() => { 
+      this.LocationModel.init(this.$.ipanorama, ipanoramaTransform(config.scenes.scenes));
+    }, 100);
+  }
+
+  _fireSwitch() {
+    this.fire('switch')
   }
 }
 

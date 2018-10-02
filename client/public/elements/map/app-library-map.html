@@ -1,8 +1,6 @@
 <style>
   :host {
     display: block;
-    margin: 20px;
-    padding: 20px;
   }
 
   @keyframes fadeIn {
@@ -95,30 +93,34 @@
     font-weight: bold;
     font-size: 16px;
   }
+
+  app-3d-room-mini {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    z-index: 1000;
+    cursor: pointer;
+  }
+
+  .floor-control {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    z-index: 1000;
+  }
+
+  #viewer {
+    background-color: white;
+  }
 </style>
 
-<div style="display:flex">
-  <div class="root" style="flex:1">
-    <div id="viewer" style="height: 400px"></div>
-  </div>
 
-  <!-- <div class="root">
-    <dom-repeat items="[[floorScenes]]">
-      <template>
-        <div class="scene-pt" on-click="_onScenePtClicked" style$="top:[[item.y]]px; left:[[item.x]]px" index$="[[index]]">
-      </template>
-    </dom-repeat>
+<div style="position: relative">
+  <div id="viewer" style="height: 400px"></div>
 
-    <div id="position" hidden$="[[!showCurrentPos]]" style$="top:[[positionY]]px; left:[[positionX]]px">
-      <div style="position: relative">
-        <div class="ring"></div>
-        <div class="marker"></div>
-      </div>
-    </div>
-    <img src$="[[floorPath]]" on-click="_showClickPt" />
-  </div> -->
+  <app-3d-room-mini on-click="_fireSwitch"></app-3d-room-mini>
 
-  <div>
+  <div class="floor-control">
     <dom-repeat items="[[floors]]">
       <template>
         <div class="floor-btn" selected$="[[item.selected]]" current$="[[item.current]]" index$="[[index]]" on-click="_showFloor">

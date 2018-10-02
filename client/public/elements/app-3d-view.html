@@ -1,8 +1,13 @@
 <style>
   app-3d-view {
     display: block;
+    border: 1px solid #ccc;
+  }
+
+  [hidden] {
+    display: none;
   }
 </style>
 
-<app-ipanorama></app-ipanorama>
-<app-library-map></app-library-map>
+<app-ipanorama id="ipanorama" on-switch="_toggle" hidden$="[[showingMap]]"></app-ipanorama>
+<app-library-map id="map" on-switch="_toggle" hidden$="[[!showingMap]]"></app-library-map>

@@ -185,7 +185,7 @@ export default class AppLibraryMap extends Mixin(PolymerElement)
     }
 
     console.log(this.floors[index], this.currentFloor);
-    this.showCurrentPos = ( this.floors[index].label === this.currentFloor);
+    this.showCurrentPos = (this.floors[index].label === this.currentFloor);
     this.renderPosMarker();
   }
 
@@ -193,6 +193,14 @@ export default class AppLibraryMap extends Mixin(PolymerElement)
     let index = parseInt(ele.getAttribute('index'));
     let scene = this.floorScenes[index];
     this.LocationModel.setScene(scene.id);
+  }
+
+  onResize() {
+    setTimeout(() => { this.viewer.invalidateSize() }, 100);
+  }
+
+  _fireSwitch() {
+    this.fire('switch')
   }
 
 }

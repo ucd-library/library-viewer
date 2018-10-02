@@ -53,8 +53,6 @@ class LocationModel extends BaseModel {
         }
       }
 
-      console.log(ipanoramaConfig);
-
       $(element).ipanorama(ipanoramaConfig);
       window.ipanorama = $(element);
     }
